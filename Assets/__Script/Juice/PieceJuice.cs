@@ -6,8 +6,6 @@ public class PieceJuice : MonoBehaviour
 {
     [SerializeField] GameObject[] pieces;
 
-
-
     // Start is called before the first frame update
     void Start()
     {

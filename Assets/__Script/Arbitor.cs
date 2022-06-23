@@ -15,9 +15,6 @@ public class Arbitor : MonoBehaviour
     [SerializeField] GamePiece[] playerPieces;
     [SerializeField] GamePiece[] enemyPieces;
 
-
-
-
     public static Arbitor Instance;
     // Start is called before the first frame update
 

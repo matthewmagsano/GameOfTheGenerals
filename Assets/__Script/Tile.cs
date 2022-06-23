@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Tile : MonoBehaviour
 {
     [SerializeField] BoxCollider2D boxCol;
-    [SerializeField]  SpriteRenderer sprite;
+    [SerializeField] SpriteRenderer sprite;
 
     [SerializeField] Color defaultTile;
     [SerializeField] Color vacantTile;

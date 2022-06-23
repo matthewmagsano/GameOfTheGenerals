@@ -24,8 +24,6 @@ public class GamePiece : MonoBehaviour
     public bool Friendly { get { return isFriendly;} }
     public int Power { get { return power; } }
 
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,8 +33,7 @@ public class GamePiece : MonoBehaviour
     private void Update()
     {
         if (transform.position.z != 0)
-            transform.position = new Vector3(transform.position.x, transform.position.y,0f);
-
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
 
         if (!dragging) return;
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -65,10 +62,9 @@ public class GamePiece : MonoBehaviour
                 Board.Instance.CheckDirections(new Vector2(previousPosition.x / 1.5f, previousPosition.y));
                 //Board.Instance.ShowVacantTiles(0.1f);
             }
-
-
         }
     }
+
     private void OnMouseUp()
     {
         if (canMove)
@@ -93,7 +89,7 @@ public class GamePiece : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Tile")&& dragging)
+        if (other.CompareTag("Tile") && dragging)
         {
             targetTile = other.GetComponent<Tile>();
             
@@ -103,7 +99,4 @@ public class GamePiece : MonoBehaviour
     {
         previousPosition = newPosition;
     }
-      
-    
-
 }
